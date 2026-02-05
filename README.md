@@ -2,12 +2,12 @@
 
 #### Clone the repository
 
-##### Linux
+#### Linux
 ```shell
 git clone https://github.com/joaostack/stacknvim ~/.config/nvim
 ```
 
-##### Windows Powershell
+#### Windows Powershell
 ```shell
 git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA/nvim
 ```
@@ -22,6 +22,7 @@ MasonInstall roslyn
 ```shell
 nvim
 ```
+
 
 
 
