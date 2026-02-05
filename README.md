@@ -1,4 +1,6 @@
-# AstroNvim Template
+# StackNvim
+
+Check [Win-DevEnvironment](https://github.com/AstroNvim/AstroNvim)
 
 ## Dependencies
 - Python3+
@@ -6,8 +8,6 @@
 - Compiler (TDM-GCC is a good option)
 
 **NOTE:** This is for AstroNvim v5+
-
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
 
@@ -22,6 +22,7 @@ git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA\nvim
 ```shell
 nvim
 ```
+
 
 
 
