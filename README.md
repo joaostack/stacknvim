@@ -23,8 +23,14 @@ You can also just clone this repository directly if you do not want to track you
 
 #### Clone the repository
 
+##### Linux
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+git clone https://github.com/joaostack/stacknvim ~/.config/nvim
+```
+
+##### Windows Powershell
+```shell
+git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA/nvim
 ```
 
 #### Start Neovim
@@ -32,3 +38,4 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 ```shell
 nvim
 ```
+
