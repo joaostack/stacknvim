@@ -13,8 +13,8 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 #### Clone the repository
 
-```shell
-git clone git@github.com:joaostack/WinDev-Environment.git "%LOCALAPPDATA%\nvim"
+```powershell
+git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA\nvim
 ```
 
 #### Start Neovim
@@ -22,6 +22,7 @@ git clone git@github.com:joaostack/WinDev-Environment.git "%LOCALAPPDATA%\nvim"
 ```shell
 nvim
 ```
+
 
 
 
