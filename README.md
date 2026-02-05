@@ -1,25 +1,4 @@
-# AstroNvim Template
-
-**NOTE:** This is for AstroNvim v5+
-
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
-
-## 🛠️ Installation
-
-#### Make a backup of your current nvim and shared folder
-
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
-```
-
-#### Create a new user repository from this template
-
-Press the "Use this template" button above to create a new repository to store your user configuration.
-
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+<p align="center"><img width="700" height="700" alt="Screenshot 2026-02-05 165303" src="https://github.com/user-attachments/assets/00d656c9-9ac2-46a3-8a34-9c93a5538599" /></p>
 
 #### Clone the repository
 
@@ -38,4 +17,5 @@ git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA/nvim
 ```shell
 nvim
 ```
+
 
