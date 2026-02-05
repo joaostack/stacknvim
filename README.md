@@ -12,10 +12,16 @@ git clone https://github.com/joaostack/stacknvim ~/.config/nvim
 git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA/nvim
 ```
 
+#### Install C# Roslyn LSP
+```
+MasonInstall roslyn
+```
+
 #### Start Neovim
 
 ```shell
 nvim
 ```
+
 
 
