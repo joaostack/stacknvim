@@ -14,14 +14,9 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- Configuração do servidor LSP C# Roslyn
   {
-    "seblyng/roslyn.nvim",
-    opts = {
-      filewatching = "auto",
-      broad_search = true,
-      silent = true,
-    },
+    "stevearc/oil.nvim",
+    config = function() require("oil").setup() end,
   },
 
   -- == Examples of Overriding Plugins ==
@@ -95,4 +90,3 @@ return {
     end,
   },
 }
-
