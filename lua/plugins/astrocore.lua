@@ -5,12 +5,12 @@ return {
 	opts = {
 		-- Configure core features of AstroNvim
 		features = {
-			large_buf = { size = 1024 * 256, lines = 10000 },    -- set global limits for large files for disabling features like treesitter
-			autopairs = true,                                    -- enable autopairs at start
-			cmp = true,                                          -- enable completion at start
+			large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
+			autopairs = true, -- enable autopairs at start
+			cmp = true, -- enable completion at start
 			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-			highlighturl = true,                                 -- highlight URLs at start
-			notifications = true,                                -- enable notifications at start
+			highlighturl = true, -- highlight URLs at start
+			notifications = true, -- enable notifications at start
 		},
 		-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
 		diagnostics = {
@@ -32,8 +32,8 @@ return {
 		},
 		-- vim options can be configured here
 		options = {
-			opt = {        -- vim.opt.<key>
-				relativenumber = true, -- sets vim.opt.relativenumber
+			opt = { -- vim.opt.<key>
+				relativenumber = false, -- sets vim.opt.relativenumber
 				number = true, -- sets vim.opt.number
 				spell = false, -- sets vim.opt.spell
 				signcolumn = "no", -- sets vim.opt.signcolumn to yes
@@ -41,7 +41,7 @@ return {
 				shiftwidth = 4,
 				tabstop = 4,
 				cursorline = false,
-				guicursor = "n-c-v:block-Cursor,i:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
+				--guicursor = "n-c-v:block-Cursor,i:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
 			},
 			g = { -- vim.g.<key>
 				-- moonfly theme transparency

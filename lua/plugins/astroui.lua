@@ -3,6 +3,6 @@ return {
 	"AstroNvim/astroui",
 	---@type AstroUIOpts
 	opts = {
-		colorscheme = "moonfly",
+		colorscheme = "tokyonight",
 	},
 }
