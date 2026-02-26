@@ -32,8 +32,8 @@ return {
 		},
 		-- vim options can be configured here
 		options = {
-			opt = {         -- vim.opt.<key>
-				relativenumber = false, -- sets vim.opt.relativenumber
+			opt = {    -- vim.opt.<key>
+				--relativenumber = false, -- sets vim.opt.relativenumber
 				number = true, -- sets vim.opt.number
 				spell = false, -- sets vim.opt.spell
 				signcolumn = "no", -- sets vim.opt.signcolumn to yes
