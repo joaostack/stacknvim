@@ -50,4 +50,3 @@ vim.api.nvim_create_autocmd("UILeave", {
 -- ColorScheme
 vim.cmd("colorscheme moonfly")
 
-require("nvim-treesitter.install").prefer_git = true
