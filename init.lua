@@ -48,5 +48,4 @@ vim.api.nvim_create_autocmd("UILeave", {
 })
 
 -- ColorScheme
-vim.cmd("colorscheme moonfly")
-
+vim.cmd("colorscheme catppuccin-mocha")

@@ -45,8 +45,6 @@ return {
 				--guicursor = "n-c-v:block-Cursor,i:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
 			},
 			g = { -- vim.g.<key>
-				-- moonfly theme transparency
-				moonflyTransparent = true,
 			},
 		},
 		-- Mappings can be configured through AstroCore as well.
