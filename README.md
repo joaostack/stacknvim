@@ -18,7 +18,13 @@ git clone https://github.com/joaostack/stacknvim $env:LOCALAPPDATA/nvim
 nvim
 ```
 
+
+#### Update
+```
+:Lazy sync
+```
+
 #### Install C# Roslyn LSP
 ```
-MasonInstall roslyn
+:MasonInstall roslyn
 ```
