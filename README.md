@@ -4,6 +4,8 @@
 - [NodeJS / Treesitter](https://nodejs.org/en/download)
 - [Python](https://www.python.org/)
 - [TDM-GCC (Windows)](https://jmeubank.github.io/tdm-gcc/)
+- [Git](https://git-scm.com/install/)
+- [.NET](https://dotnet.microsoft.com/pt-br/download)
 
 ---
 
