@@ -6,6 +6,7 @@
 - [TDM-GCC (Windows)](https://jmeubank.github.io/tdm-gcc/)
 - [Git](https://git-scm.com/install/)
 - [.NET](https://dotnet.microsoft.com/pt-br/download)
+- [NetCoreDbg](https://github.com/Samsung/netcoredbg)
 
 ---
 
