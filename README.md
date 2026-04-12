@@ -7,6 +7,7 @@
 - [Git](https://git-scm.com/install/)
 - [.NET](https://dotnet.microsoft.com/pt-br/download)
 - [NetCoreDbg](https://github.com/Samsung/netcoredbg)
+- [Nerd Font](https://www.nerdfonts.com/)
 
 ---
 
