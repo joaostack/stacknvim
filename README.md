@@ -33,8 +33,3 @@ nvim
 ```
 :Lazy sync
 ```
-
-#### Install C# Roslyn LSP
-```
-:MasonInstall roslyn
-```
