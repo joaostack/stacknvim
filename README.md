@@ -1,4 +1,4 @@
-<p align="center"><img width="700" height="700" alt="Screenshot 2026-02-05 165303" src="https://github.com/user-attachments/assets/00d656c9-9ac2-46a3-8a34-9c93a5538599" /></p>
+<img width="445" height="318" alt="logo" src="https://github.com/user-attachments/assets/65178617-2d36-4a2b-b5b5-f155dd69abc5" />
 
 ## Dependencies
 - [NodeJS / Treesitter](https://nodejs.org/en/download)
