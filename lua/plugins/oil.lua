@@ -2,14 +2,28 @@ return {
 	"stevearc/oil.nvim",
 	---@module 'oil'
 	---@type oil.SetupOpts
-	opts = {},
-	-- Optional dependencies
-	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-	-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-	lazy = false,
-
-	config = function()
-		require("oil").setup()
-	end,
+	lazy = false, -- must be eager-loaded for opening directories
+	dependencies = { { "echasnovski/mini.icons", opts = {} } },
+	opts = {
+		default_file_explorer = true,
+		columns = {
+			"icon",
+			"permissions",
+			"size",
+			"mtime",
+		},
+		view_options = {
+			show_hidden = true, -- show dotfiles
+		},
+		float = {
+			padding = 2,
+			border = "rounded",
+		},
+		keymaps = {
+			["<C-s>"] = { "actions.select", opts = { vertical = true } },
+			["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+			["<C-p>"] = "actions.preview",
+			["q"] = "actions.close",
+		},
+	},
 }

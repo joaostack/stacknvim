@@ -5,70 +5,55 @@ return {
 	opts = {
 		-- Configure core features of AstroNvim
 		features = {
-			large_buf = { size = 1024 * 256, lines = 10000 },    -- set global limits for large files for disabling features like treesitter
-			autopairs = true,                                    -- enable autopairs at start
-			cmp = true,                                          -- enable completion at start
-			diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-			highlighturl = true,                                 -- highlight URLs at start
-			notifications = true,                                -- enable notifications at start
+			large_buf = { size = 1024 * 256, lines = 10000 }, -- disable treesitter etc. for large files
+			autopairs = true,
+			cmp = true,
+			diagnostics = { virtual_text = true, virtual_lines = false },
+			highlighturl = true,
+			notifications = true,
 		},
-		-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+		-- Diagnostics configuration
 		diagnostics = {
 			virtual_text = true,
 			underline = true,
 		},
-		-- passed to `vim.filetype.add`
-		filetypes = {
-			-- see `:h vim.filetype.add` for usage
-			extension = {
-				foo = "fooscript",
-			},
-			filename = {
-				[".foorc"] = "fooscript",
-			},
-			pattern = {
-				[".*/etc/foo/.*"] = "fooscript",
-			},
-		},
-		-- vim options can be configured here
+		-- vim options
 		options = {
-			opt = {    -- vim.opt.<key>
-				--relativenumber = false, -- sets vim.opt.relativenumber
-				number = true, -- sets vim.opt.number
-				spell = false, -- sets vim.opt.spell
-				signcolumn = "no", -- sets vim.opt.signcolumn to yes
-				wrap = true, -- sets vim.opt.wrap
+			opt = {
+				number = true,
+				relativenumber = true, -- relative numbers help with jump motions (e.g. 5j, 3k)
+				spell = false,
+				signcolumn = "yes",   -- always show signcolumn to avoid layout shifts
+				wrap = false,          -- no wrap is usually better for code
 				shiftwidth = 4,
 				tabstop = 4,
-				cursorline = false,
 				expandtab = true,
-				--guicursor = "n-c-v:block-Cursor,i:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
+				cursorline = true,     -- highlight current line for easier navigation
+				scrolloff = 8,         -- keep 8 lines of context when scrolling
+				sidescrolloff = 8,
+				termguicolors = true,
+				undofile = true,       -- persistent undo history across sessions
+				ignorecase = true,     -- case-insensitive search...
+				smartcase = true,      -- ...unless you type uppercase
+				splitbelow = true,     -- new horizontal splits go below
+				splitright = true,     -- new vertical splits go right
 			},
-			g = { -- vim.g.<key>
-			},
+			g = {},
 		},
-		-- Mappings can be configured through AstroCore as well.
-		-- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
+		-- Mappings
 		mappings = {
-			-- first key is the mode
 			n = {
-				-- second key is the lefthand side of the map
-
-				-- navigate buffer tabs
+				-- Navigate buffer tabs
 				["]b"] = {
-					function()
-						require("astrocore.buffer").nav(vim.v.count1)
-					end,
+					function() require("astrocore.buffer").nav(vim.v.count1) end,
 					desc = "Next buffer",
 				},
 				["[b"] = {
-					function()
-						require("astrocore.buffer").nav(-vim.v.count1)
-					end,
+					function() require("astrocore.buffer").nav(-vim.v.count1) end,
 					desc = "Previous buffer",
 				},
 
-				-- mappings seen under group name "Buffer"
+				-- Close buffer from tabline
 				["<Leader>bd"] = {
 					function()
 						require("astroui.status.heirline").buffer_picker(function(bufnr)
@@ -78,12 +63,14 @@ return {
 					desc = "Close buffer from tabline",
 				},
 
-				-- tables with just a `desc` key will be registered with which-key if it's installed
-				-- this is useful for naming menus
-				-- ["<Leader>b"] = { desc = "Buffers" },
+				-- Better window navigation
+				["<C-h>"] = { "<C-w>h", desc = "Move to left window" },
+				["<C-j>"] = { "<C-w>j", desc = "Move to lower window" },
+				["<C-k>"] = { "<C-w>k", desc = "Move to upper window" },
+				["<C-l>"] = { "<C-w>l", desc = "Move to right window" },
 
-				-- setting a mapping to false will disable it
-				-- ["<C-S>"] = false,
+				-- Oil file explorer
+				["-"] = { "<cmd>Oil<cr>", desc = "Open parent directory (oil)" },
 			},
 		},
 	},

@@ -7,47 +7,39 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
 				},
-				ignore_focus = {},
-				always_divide_middle = true,
-				always_show_tabline = true,
-				globalstatus = false,
+				globalstatus = true, -- single statusline across all windows (cleaner)
 				refresh = {
 					statusline = 1000,
 					tabline = 1000,
 					winbar = 1000,
-					refresh_time = 16, -- ~60fps
-					events = {
-						"WinEnter",
-						"BufEnter",
-						"BufWritePost",
-						"SessionLoadPost",
-						"FileChangedShellPost",
-						"VimResized",
-						"Filetype",
-						"CursorMoved",
-						"CursorMovedI",
-						"ModeChanged",
-					},
 				},
 			},
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = { "encoding", "fileformat", "filetype" },
+				lualine_c = {
+					{ "filename", path = 1 }, -- show relative path instead of just filename
+				},
+				lualine_x = {
+					dotnet.lualine.jobs,         -- dotnet jobs in active window
+					dotnet.lualine.active_project, -- active dotnet project
+					"encoding",
+					"fileformat",
+					"filetype",
+				},
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},
 			inactive_sections = {
-				lualine_a = { "mode", dotnet.lualine.jobs },
-				lualine_b = { dotnet.lualine.active_project },
-				lualine_c = { "filename" },
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = { { "filename", path = 1 } },
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},
@@ -55,7 +47,7 @@ return {
 			tabline = {},
 			winbar = {},
 			inactive_winbar = {},
-			extensions = {},
+			extensions = { "oil", "lazy", "nvim-dap-ui" },
 		})
 	end,
 }
