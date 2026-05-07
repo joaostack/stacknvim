@@ -7,6 +7,7 @@
 - [Git](https://git-scm.com/install/)
 - [.NET](https://dotnet.microsoft.com/pt-br/download)
 - [Nerd Font](https://www.nerdfonts.com/)
+- [Gnu Make](https://gnuwin32.sourceforge.net/packages/make.htm)
 
 ---
 
