@@ -23,33 +23,40 @@ return {
 				number = true,
 				relativenumber = true, -- relative numbers help with jump motions (e.g. 5j, 3k)
 				spell = false,
-				signcolumn = "yes",   -- always show signcolumn to avoid layout shifts
-				wrap = false,          -- no wrap is usually better for code
+				signcolumn = "yes", -- always show signcolumn to avoid layout shifts
+				wrap = false, -- no wrap is usually better for code
 				shiftwidth = 4,
 				tabstop = 4,
 				expandtab = true,
-				cursorline = true,     -- highlight current line for easier navigation
-				scrolloff = 8,         -- keep 8 lines of context when scrolling
+				cursorline = false, -- highlight current line for easier navigation
+				scrolloff = 8, -- keep 8 lines of context when scrolling
 				sidescrolloff = 8,
 				termguicolors = true,
-				undofile = true,       -- persistent undo history across sessions
-				ignorecase = true,     -- case-insensitive search...
-				smartcase = true,      -- ...unless you type uppercase
-				splitbelow = true,     -- new horizontal splits go below
-				splitright = true,     -- new vertical splits go right
+				undofile = true, -- persistent undo history across sessions
+				ignorecase = true, -- case-insensitive search...
+				smartcase = true, -- ...unless you type uppercase
+				splitbelow = true, -- new horizontal splits go below
+				splitright = true, -- new vertical splits go right
+				guicursor = "",
 			},
-			g = {},
+			g = {
+				moonflyTransparent = true,
+			},
 		},
 		-- Mappings
 		mappings = {
 			n = {
 				-- Navigate buffer tabs
 				["]b"] = {
-					function() require("astrocore.buffer").nav(vim.v.count1) end,
+					function()
+						require("astrocore.buffer").nav(vim.v.count1)
+					end,
 					desc = "Next buffer",
 				},
 				["[b"] = {
-					function() require("astrocore.buffer").nav(-vim.v.count1) end,
+					function()
+						require("astrocore.buffer").nav(-vim.v.count1)
+					end,
 					desc = "Previous buffer",
 				},
 
